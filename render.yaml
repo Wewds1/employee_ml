@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: northstar-people-intelligence
+    env: docker
+    plan: free

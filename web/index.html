@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Northstar People Intelligence</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="rail">
+        <div class="brand-block">
+          <p class="eyebrow">People Intelligence</p>
+          <h1>Northstar</h1>
+          <p class="muted">
+            Attrition command center for workforce planning, talent risk review, and retention action design.
+          </p>
+        </div>
+        <div class="rail-panel">
+          <p class="panel-kicker">Current posture</p>
+          <div id="riskSummary" class="risk-stack"></div>
+        </div>
+        <div class="rail-panel">
+          <p class="panel-kicker">Model readout</p>
+          <div id="modelStats" class="metric-list"></div>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="masthead">
+          <div>
+            <p class="eyebrow">Enterprise retention workspace</p>
+            <h2>Workforce attrition risk at executive resolution</h2>
+          </div>
+          <div class="masthead-note">
+            <span class="dot"></span>
+            Scenario scoring and department monitoring are live.
+          </div>
+        </header>
+
+        <section class="top-grid">
+          <article class="hero-card">
+            <div class="section-head">
+              <div>
+                <p class="panel-kicker">Executive snapshot</p>
+                <h3>Operating pressure across the workforce</h3>
+              </div>
+            </div>
+            <div id="heroMetrics" class="hero-metrics"></div>
+            <div id="departmentHeat" class="department-heat"></div>
+          </article>
+
+          <article class="panel">
+            <div class="section-head">
+              <div>
+                <p class="panel-kicker">Decision lab</p>
+                <h3>Score a retention scenario</h3>
+              </div>
+            </div>
+            <form id="predictForm" class="scenario-form">
+              <label>
+                Age
+                <input name="age" type="number" step="0.1" value="34.0" min="18" max="70" />
+              </label>
+              <label>
+                Salary
+                <input name="salary" type="number" step="0.01" value="62000" min="1" />
+              </label>
+              <label>
+                Tenure
+                <input name="tenure_years" type="number" step="0.1" value="2.8" min="0" />
+              </label>
+              <label>
+                Performance
+                <input name="performance_score" type="number" step="1" value="3" min="1" max="5" />
+              </label>
+              <label>
+                Department
+                <select name="department">
+                  <option>Engineering</option>
+                  <option>Finance</option>
+                  <option>Hr</option>
+                  <option>Marketing</option>
+                  <option>Sales</option>
+                </select>
+              </label>
+              <label>
+                Missing performance history
+                <select name="perf_was_missing">
+                  <option value="0">No</option>
+                  <option value="1">Yes</option>
+                </select>
+              </label>
+              <button type="submit">Run scenario</button>
+            </form>
+            <div id="predictionCard" class="prediction-card"></div>
+          </article>
+        </section>
+
+        <section class="mid-grid">
+          <article class="panel">
+            <div class="section-head">
+              <div>
+                <p class="panel-kicker">Department exposure</p>
+                <h3>Headcount, salary, and risk concentration</h3>
+              </div>
+            </div>
+            <div id="departmentTable" class="table-shell"></div>
+          </article>
+
+          <article class="panel">
+            <div class="section-head">
+              <div>
+                <p class="panel-kicker">Primary drivers</p>
+                <h3>Signals shifting attrition probability</h3>
+              </div>
+            </div>
+            <div id="driverList" class="driver-list"></div>
+          </article>
+        </section>
+
+        <section class="bottom-grid">
+          <article class="panel">
+            <div class="section-head">
+              <div>
+                <p class="panel-kicker">Risk matrix</p>
+                <h3>Tenure versus attrition pressure</h3>
+              </div>
+            </div>
+            <div id="scatterPlot" class="plot-shell"></div>
+          </article>
+
+          <article class="panel">
+            <div class="section-head">
+              <div>
+                <p class="panel-kicker">Priority roster</p>
+                <h3>Employees that demand attention first</h3>
+              </div>
+            </div>
+            <div id="employeeTable" class="table-shell"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
